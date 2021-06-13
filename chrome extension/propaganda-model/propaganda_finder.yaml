@@ -1,0 +1,7 @@
+- name: propaganda-finder
+  kind: RealtimeAPI
+  handler:
+    type: python
+    path: handler.py
+  compute:
+    gpu: 1

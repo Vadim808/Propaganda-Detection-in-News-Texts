@@ -1,0 +1,79 @@
+{
+  "name": "propaganda-finder",
+  "kind": "RealtimeAPI",
+  "apis": null,
+  "handler": {
+    "type": "python",
+    "path": "handler.py",
+    "protobuf_path": null,
+    "multi_model_reloading": null,
+    "models": null,
+    "server_side_batching": null,
+    "processes_per_replica": 1,
+    "threads_per_process": 1,
+    "shm_size": null,
+    "python_path": null,
+    "log_level": "info",
+    "image": "quay.io/cortexlabs/python-handler-gpu:0.35.0-cuda10.2-cudnn8",
+    "tensorflow_serving_image": "",
+    "config": {},
+    "env": {},
+    "dependencies": {
+      "pip": "requirements.txt",
+      "conda": "conda-packages.txt",
+      "shell": "dependencies.sh"
+    }
+  },
+  "definition": null,
+  "networking": {
+    "endpoint": null
+  },
+  "compute": {
+    "cpu": "200m",
+    "mem": null,
+    "gpu": 1,
+    "inf": 0,
+    "node_groups": null
+  },
+  "autoscaling": {
+    "min_replicas": 1,
+    "max_replicas": 100,
+    "init_replicas": 1,
+    "target_replica_concurrency": null,
+    "max_replica_concurrency": 1024,
+    "window": 60000000000,
+    "downscale_stabilization_period": 300000000000,
+    "upscale_stabilization_period": 60000000000,
+    "max_downscale_factor": 0.75,
+    "max_upscale_factor": 1.5,
+    "downscale_tolerance": 0.05,
+    "upscale_tolerance": 0.05
+  },
+  "update_strategy": {
+    "max_surge": "25%",
+    "max_unavailable": "25%"
+  },
+  "index": 0,
+  "file_name": "propaganda_finder.yaml",
+  "submitted_api_spec": {
+    "compute": {
+      "gpu": 1
+    },
+    "handler": {
+      "path": "handler.py",
+      "type": "python"
+    },
+    "kind": "RealtimeAPI",
+    "name": "propaganda-finder"
+  },
+  "id": "",
+  "spec_id": "",
+  "handler_id": "",
+  "deployment_id": "",
+  "key": "",
+  "handler_key": "",
+  "last_updated": 0,
+  "metadata_root": "",
+  "project_id": "",
+  "project_key": ""
+}
