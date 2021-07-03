@@ -9,7 +9,9 @@
 Для использования расширения Chrome:
 
 1) Запуск локального сервера:
+
 export FLASK_APP=server_flask.py
+
 flask run
 
 2) Добавление расширения:
